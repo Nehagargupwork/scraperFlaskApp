@@ -23,7 +23,7 @@ def rank():
         if rank is None:
             return jsonify({'statusCode': 500, 'message': 'Error occurred while fetching rank'}), 500
 
-        return jsonify({'statusCode': 200, 'rank': rank})
+        return jsonify({'statusCode': 200, 'rank': rank, 'keyword': keyword, 'domain': domain, 'region': region })
 
     except Exception as e:
         return jsonify({'statusCode': 500, 'message': str(e)}), 500
